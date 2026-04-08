@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Data Platform Modernization — Technical Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --primary: #1e293b;
+    --accent: #2563eb;
+    --accent-light: #3b82f6;
+    --bg: #ffffff;
+    --bg-alt: #f8fafc;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-secondary: #64748b;
+    --green: #16a34a;
+    --purple: #7c3aed;
+    --orange: #ea580c;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 14px;
+  }
+
+  .page {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 50px 60px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 16px;
+    line-height: 1.2;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 12px;
+  }
+
+  h1.project-title {
+    font-size: 24px;
+    margin-top: 48px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    page-break-before: always;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  p { margin-bottom: 12px; }
+
+  blockquote {
+    background: var(--bg-alt);
+    border-left: 4px solid var(--accent);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  blockquote strong { color: var(--accent); }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+  th {
+    background: var(--bg-alt);
+    text-align: left;
+    padding: 10px 14px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+  td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  td strong { color: var(--primary); }
+
+  ul, ol {
+    margin: 8px 0 16px 24px;
+  }
+  li {
+    margin-bottom: 6px;
+  }
+
+  .diagram {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 20px 24px;
+    border-radius: 8px;
+    font-family: 'Consolas', 'Fira Code', 'JetBrains Mono', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-x: auto;
+    margin: 16px 0;
+    white-space: pre;
+  }
+
+  .author-block {
+    text-align: center;
+    margin-top: 32px;
+    padding: 20px;
+    background: var(--bg-alt);
+    border-radius: 8px;
+  }
+  .author-block .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .author-block .role {
+    font-size: 14px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .toc {
+    background: var(--bg-alt);
+    padding: 20px 28px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  .toc ol { margin: 8px 0 0 20px; }
+  .toc li { margin-bottom: 4px; font-size: 14px; }
+  .toc a { color: var(--accent); text-decoration: none; font-weight: 500; }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .section-label.blue { background: var(--accent); }
+  .section-label.green { background: var(--green); }
+  .section-label.purple { background: var(--purple); }
+
+  code {
+    background: var(--bg-alt);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: 'Consolas', monospace;
+  }
+
+  @media print {
+    body { font-size: 13px; }
+    .page { padding: 30px 40px; max-width: none; }
+    h1.project-title { page-break-before: always; }
+    .diagram { font-size: 11px; }
+    table { font-size: 12px; page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ═══ TITLE ═══ -->
+<h1>Enterprise Data Platform Modernization — Technical Portfolio</h1>
+
+<blockquote>
+  <strong>Three interconnected projects establishing a complete, production-proven migration process</strong> — from undocumented legacy chaos to a fully automated, AI-driven modern Lakehouse.<br>
+  Designed and built end-to-end: reverse engineering, architecture, migration pipeline, and autonomous AI orchestration — then handed over to the team for ongoing execution.
+</blockquote>
+
+<div class="author-block">
+  <div class="name">Hrvoje Jerkovic</div>
+  <div class="role">Data Architect / Principal Data Engineer</div>
+</div>
+
+<div class="toc">
+  <strong>Table of Contents</strong>
+  <ol>
+    <li><a href="#p1">Project 1: Automated Enterprise ETL Reverse Engineering at Scale</a></li>
+    <li><a href="#p2">Project 2: Legacy-to-Lakehouse Platform Migration — Oracle to Spark + Delta Lake</a></li>
+    <li><a href="#p3">Project 3: AI Multi-Agent Orchestration — Autonomous Migration Pipeline</a></li>
+  </ol>
+</div>
+
+<hr>
+
+<!-- ═══ PROJECT 1 ═══ -->
+<h1 class="project-title" id="p1"><span class="section-label blue">Project 1</span><br>Automated Enterprise ETL Reverse Engineering at Scale</h1>
+
+<h2>1.1 Executive Summary</h2>
+<p>Designed and built a <strong>production-grade data lineage analysis platform</strong> that automatically reverse-engineered an undocumented enterprise ETL landscape spanning <strong>~4,300 mappings, ~1,800 tables, and 20+ source systems</strong> — a task that would have taken a team of analysts months to do manually.</p>
+<p>The platform performs deep, multi-tool lineage tracing across Oracle Data Integrator (ODI), Oracle Job Chains (OJC), IBM DataStage, PL/SQL stored procedures, and PostgreSQL Data Lake landing zones — producing <strong>interactive HTML reports with full SQL visibility</strong> at both column-level and table-level granularity. It was built from scratch in Python to solve a critical gap at a large financial institution: thousands of ETL jobs across multiple orchestration tools with <strong>zero end-to-end documentation</strong> of actual data flows and transformations.</p>
+
+<h2>1.2 Problem Statement</h2>
+<p>The client's data warehouse environment consisted of:</p>
+<ul>
+  <li><strong>Oracle Data Integrator (ODI)</strong> as the primary ETL engine with <strong>~4,300 mappings</strong> across <strong>~20 projects</strong> and <strong>~120 folders</strong></li>
+  <li><strong>IBM DataStage</strong> jobs handling a significant portion of ETL processing, particularly for legacy data integration and complex transformation pipelines</li>
+  <li><strong>PL/SQL scripts and stored procedures</strong> implementing substantial business logic in Oracle databases, including validation routines, partition management, and statistics gathering (<code>DBMS_STATS</code>)</li>
+  <li><strong>Oracle Job Chains (OJC)</strong> orchestrating multi-stage screening pipelines (Staging → Data Quality → Core → Views → Targets)</li>
+  <li><strong>Groovy scripts</strong> embedded within ODI mapping expressions and transformations for complex data manipulation</li>
+  <li><strong>PostgreSQL Data Lake</strong> with ~2 TB across ~1,800 tables in ~60 landing zone schemas</li>
+  <li><strong>Oracle DWH</strong> with multiple schemas: Core (~340 tables), Reporting (~220 target + ~190 regulatory + ~250 view objects), Analytics (~1,700 tables)</li>
+  <li><strong>20+ upstream source systems</strong> including Core Banking (~300 tables), Regulatory Reporting (~240 tables), Digital Banking (~100 tables), AML/Compliance, Customer Management, Data Privacy, Risk Management, and others</li>
+</ul>
+<p>No single tool or document captured the end-to-end data flow from source systems through landing zones, staging, data quality, core layer, views, and final reporting targets.</p>
+
+<h2>1.3 Solution Architecture</h2>
+
+<h3>1.3.1 ETL Pipeline Discovered — 7-Stage Linear Flow</h3>
+<div class="diagram">STAGE 1          STAGE 2          STAGE 3           STAGE 4          STAGE 5         STAGE 6          STAGE 7
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Landing Zone →  Temporary    →   Staging       →   Data Quality →   Core Layer  →  Report Views  → Target Tables
+(PostgreSQL)    (Oracle)        (PostgreSQL→Ora)   (Oracle)        (Oracle)       (Oracle Views)   (Oracle)
+Raw Ingestion   Temp Tables     Cleaned/Typed      DQ Validation   Dim/Fact       Abstraction      Analytical/Regulatory</div>
+
+<h3>1.3.2 Data Flow Summary</h3>
+<div class="diagram">20+ SOURCE SYSTEMS (Core Banking, Regulatory, Digital Banking, AML, Risk, CRM, Treasury, ...)
+         │
+         ▼
+PostgreSQL Data Lake — ~60 Landing Zone Schemas, ~1,800 Tables
+         │  ODI Ingestion Project (~1,500 mappings) + DataStage Jobs
+         ▼
+Oracle DWH — Core Schema (Staging → Data Quality → Core Layer)
+         │  OJC Screening Pipeline + PL/SQL Validation
+         ▼
+Reporting Schema — Report Views (~250) → ODI Reporting Mappings (~400)
+         │
+         ▼
+FINAL TARGETS — ~220 analytical target tables + ~190 regulatory reporting tables</div>
+
+<h3>1.3.3 Lineage Resolution — 7 Strategies</h3>
+<table>
+  <thead><tr><th>#</th><th>Strategy</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>OJC Target Table Match</strong></td><td>Direct <code>PRM_TARGET_TABLE_NAME</code> matching in OJC job step tables</td></tr>
+    <tr><td>2</td><td><strong>Target Direct Name Match</strong></td><td>Exact ODI mapping names for target tables</td></tr>
+    <tr><td>3</td><td><strong>Target Branch Match</strong></td><td>Mapping + branch component resolution for multi-output mappings</td></tr>
+    <tr><td>4</td><td><strong>Regulatory Set + Suffix</strong></td><td>Pattern-based suffix matching for regulatory reporting tables</td></tr>
+    <tr><td>5</td><td><strong>Regulatory Branch Match</strong></td><td>Mapping + branch resolution for regulatory multi-output</td></tr>
+    <tr><td>6</td><td><strong>Regulatory Temp Patterns</strong></td><td>Temporary regulatory table handling in intermediate processing</td></tr>
+    <tr><td>7</td><td><strong>View Resolution</strong></td><td>Oracle view DDL parsing to extract underlying Core layer sources</td></tr>
+  </tbody>
+</table>
+
+<h3>1.3.4 ETL Stage Detection</h3>
+<table>
+  <thead><tr><th>Prefix</th><th>Stage</th><th>Resolver</th><th>Database</th><th>Tool</th></tr></thead>
+  <tbody>
+    <tr><td>Target/Regulatory</td><td>ODI Target</td><td>ODI session log queries</td><td>Oracle</td><td>ODI</td></tr>
+    <tr><td>Report Views</td><td>View Alias</td><td>View DDL parsing</td><td>Oracle</td><td>SQL</td></tr>
+    <tr><td>Core Layer</td><td>Core Tables</td><td>OJC CORE job resolution</td><td>Oracle</td><td>OJC + PL/SQL</td></tr>
+    <tr><td>Data Quality</td><td>DQ Checks</td><td>OJC DQ job resolution</td><td>Oracle</td><td>OJC + PL/SQL</td></tr>
+    <tr><td>Staging</td><td>Staging</td><td>OJC Staging job resolution</td><td>Oracle/PostgreSQL</td><td>OJC + DataStage</td></tr>
+    <tr><td>Landing Zone</td><td>Terminal (source)</td><td>Landing zone identification</td><td>PostgreSQL</td><td>DataStage + ODI</td></tr>
+  </tbody>
+</table>
+
+<h2>1.4 Technology Stack</h2>
+
+<h3>1.4.1 ETL &amp; Orchestration Tools (Analyzed)</h3>
+<table>
+  <thead><tr><th>Technology</th><th>Role</th><th>Scale</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Oracle Data Integrator (ODI)</strong></td><td>Primary ETL engine</td><td>~20 projects, ~4,300 mappings, ~4,700 datastores, ~100 models</td></tr>
+    <tr><td><strong>Oracle Job Chains (OJC)</strong></td><td>Multi-stage screening pipeline orchestration</td><td>Staging → DQ → Core → Views → Targets</td></tr>
+    <tr><td><strong>IBM DataStage</strong></td><td>Legacy data integration, batch ETL processing</td><td>Significant portion of landing zone ingestion</td></tr>
+    <tr><td><strong>PL/SQL</strong></td><td>Business logic, validation procedures</td><td>Embedded across Oracle schemas</td></tr>
+    <tr><td><strong>Groovy</strong></td><td>ODI mapping expressions, transformation logic</td><td>Embedded in ODI mappings</td></tr>
+  </tbody>
+</table>
+
+<h3>1.4.2 Databases (Source &amp; Target)</h3>
+<table>
+  <thead><tr><th>Database</th><th>Role</th><th>Key Metrics</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Oracle (ODI Repository)</strong></td><td>ODI Repository (metadata)</td><td>SNP_* tables, ~4,300 mappings</td></tr>
+    <tr><td><strong>Oracle (DWH Production)</strong></td><td>DWH &amp; Reporting (OJC target)</td><td>Core, Reporting, Analytics schemas</td></tr>
+    <tr><td><strong>PostgreSQL (Data Lake)</strong></td><td>Data Lake (landing zones)</td><td>~60 schemas, ~1,800 tables, ~2 TB</td></tr>
+  </tbody>
+</table>
+
+<h3>1.4.3 Development Stack</h3>
+<table>
+  <thead><tr><th>Component</th><th>Technology</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Language</strong></td><td>Python 3.12+</td><td>Main implementation</td></tr>
+    <tr><td><strong>Oracle Connectivity</strong></td><td><code>oracledb</code></td><td>ODI repository + DWH queries</td></tr>
+    <tr><td><strong>PostgreSQL Connectivity</strong></td><td><code>psycopg2-binary</code></td><td>Data Lake metadata + DDL verification</td></tr>
+    <tr><td><strong>SQL Parsing</strong></td><td><code>sqlglot</code></td><td>SQL parsing, manipulation, and analysis</td></tr>
+    <tr><td><strong>Data Validation</strong></td><td><code>Pydantic</code></td><td>Settings and configuration validation</td></tr>
+    <tr><td><strong>Data Processing</strong></td><td><code>pandas</code>, <code>pyarrow</code>, <code>openpyxl</code></td><td>Data manipulation, Parquet, Excel</td></tr>
+    <tr><td><strong>Console UI</strong></td><td><code>rich</code></td><td>Colored terminal output, progress bars</td></tr>
+    <tr><td><strong>HTML Reports</strong></td><td><code>Jinja2</code></td><td>Interactive HTML report rendering</td></tr>
+    <tr><td><strong>Environment</strong></td><td><code>python-dotenv</code></td><td>Secure credential management</td></tr>
+    <tr><td><strong>Version Control</strong></td><td><code>GitPython</code></td><td>Automated Git workflow</td></tr>
+  </tbody>
+</table>
+
+<h2>1.5 Key Capabilities</h2>
+
+<h3>1.5.1 Column-Level Lineage</h3>
+<ul>
+  <li>Traces a single column from any target/regulatory table back to its original source(s)</li>
+  <li>Full DDL/SQL retrieval from ODI session logs</li>
+  <li>Expression parsing through all transformation layers (including Groovy expressions)</li>
+  <li>Terminal source identification (Data Lake landing zone tables)</li>
+  <li>Cycle detection with path recording</li>
+  <li>Source origin badges: <code>[SESSION LOG ✓]</code>, <code>[VIEW DDL]</code>, <code>[OJC]</code>, <code>[GENERATED]</code></li>
+  <li>Maximum recursion depth: configurable (default 15 levels)</li>
+</ul>
+
+<h3>1.5.2 Table-Level Lineage</h3>
+<ul>
+  <li>Identifies all source tables feeding into a target table</li>
+  <li>Classifies sources into categories: Data Lake, External, Unmapped, cross-target sources</li>
+  <li>Full lineage graph traversal with visited-node tracking (prevents cycles)</li>
+  <li>Produces structured JSON output for downstream automation</li>
+  <li>Exports: edges, SQL steps, build sequence (topological sort), and ODI/OJC mapping metadata</li>
+</ul>
+
+<h3>1.5.3 Batch Processing</h3>
+<ul>
+  <li>Automated processing of all ~220 target tables from the Reporting schema</li>
+  <li>Progress tracking with resume capability for interrupted runs</li>
+  <li>Per-table HTML reports + CSV/XLSX summary with statistics</li>
+  <li>Performance: 30–120 seconds per table, full batch in ~2–4 hours</li>
+</ul>
+
+<h3>1.5.4 Analytics &amp; Dashboards</h3>
+<ul>
+  <li>Tableau-ready SQL generation for business dashboards</li>
+  <li>Dimension data export to CSV for analytics platforms</li>
+  <li>DWH dimension inspection tools for data governance</li>
+</ul>
+
+<h2>1.6 Output Artifacts</h2>
+<table>
+  <thead><tr><th>Output</th><th>Format</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td>Interactive HTML Reports</td><td><code>.html</code></td><td>Collapsible tree visualization, syntax-highlighted SQL, source badges, statistics dashboard</td></tr>
+    <tr><td>JSON Lineage Trees</td><td><code>.json</code></td><td>Full graph structure with all nodes and edges</td></tr>
+    <tr><td>Migration Data</td><td>JSON</td><td>Edges, SQL steps, build sequence for dbt migration pipeline</td></tr>
+    <tr><td>Execution Logs</td><td><code>.log</code>, <code>.json</code></td><td>Detailed execution transcript with per-step metadata</td></tr>
+    <tr><td>Batch Summaries</td><td><code>.csv</code>, <code>.xlsx</code></td><td>Per-table source counts, timings, categorization</td></tr>
+    <tr><td>Column Lineage Reports</td><td><code>.html</code></td><td>Per-column trace with expression parsing through all layers</td></tr>
+  </tbody>
+</table>
+
+<h2>1.7 Scale &amp; Coverage Metrics</h2>
+<table>
+  <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+  <tbody>
+    <tr><td>Analytical target tables traced</td><td><strong>~220</strong></td></tr>
+    <tr><td>Regulatory reporting tables traced</td><td><strong>~190</strong></td></tr>
+    <tr><td>Core dimension/fact tables</td><td><strong>~340</strong></td></tr>
+    <tr><td>Report view objects</td><td><strong>~250</strong></td></tr>
+    <tr><td>ODI mappings analyzed</td><td><strong>~4,300</strong></td></tr>
+    <tr><td>ODI datastores</td><td><strong>~4,700</strong></td></tr>
+    <tr><td>Landing zone tables</td><td><strong>~1,800</strong></td></tr>
+    <tr><td>Source systems integrated</td><td><strong>20+</strong></td></tr>
+    <tr><td>LCM mapgroup coverage</td><td><strong>99.6%</strong></td></tr>
+    <tr><td>Maximum lineage depth</td><td><strong>7 stages</strong></td></tr>
+    <tr><td>Estimated data volume</td><td><strong>~2 TB</strong></td></tr>
+  </tbody>
+</table>
+
+<h2>1.8 Transferable Expertise — Applicable to Any Legacy Data Environment</h2>
+
+<h3>Immediate Value</h3>
+<ul>
+  <li><strong>Full Data Lineage Audit</strong> — Automated discovery of all data flows across ODI, DataStage, PL/SQL, Informatica, Talend, or any SQL-based ETL. Produces a complete lineage graph within days, not months.</li>
+  <li><strong>Impact Analysis</strong> — Before any change, automatically determine which downstream reports, dashboards, and regulatory outputs are affected.</li>
+  <li><strong>Data Governance Documentation</strong> — Auto-generated HTML/PDF reports for compliance (GDPR, BCBS 239, EBA guidelines) showing exactly how sensitive data flows through the pipeline.</li>
+  <li><strong>ETL Rationalization</strong> — Identify redundant tables, unused mappings, dead-end pipelines, and duplicate transformations. Typical findings: 20–40% of tables are no longer actively used.</li>
+</ul>
+
+<h3>Migration Readiness</h3>
+<ul>
+  <li><strong>Migration Feasibility Assessment</strong> — Score each ETL job for migration complexity (simple passthrough vs. complex PL/SQL procedural logic).</li>
+  <li><strong>Platform-Agnostic Lineage</strong> — The approach works regardless of target: Spark/Delta Lake, Snowflake, Databricks, BigQuery, Synapse, or any dbt-supported platform.</li>
+  <li><strong>Automated KB Generation</strong> — Extract all SQL, dependencies, and build sequences into a structured PostgreSQL knowledge base ready for AI-powered migration.</li>
+</ul>
+
+<h3>Advanced Analytics</h3>
+<ul>
+  <li><strong>Cross-System Lineage</strong> — Trace data flows across organizational boundaries (e.g., from source banking system through DWH into regulatory reporting).</li>
+  <li><strong>Column-Level Impact Analysis</strong> — Precise field-level lineage for data quality root cause analysis.</li>
+  <li><strong>Tableau/Power BI Lineage Integration</strong> — Connect ETL lineage to BI tool usage analytics for true end-to-end visibility.</li>
+</ul>
+
+<hr>
+
+<!-- ═══ PROJECT 2 ═══ -->
+<h1 class="project-title" id="p2"><span class="section-label green">Project 2</span><br>Legacy-to-Lakehouse Platform Migration — Oracle to Spark + Delta Lake</h1>
+
+<h2>2.1 Executive Summary</h2>
+<p>Architected and implemented <strong>a full-scale migration framework and process</strong> for an enterprise data warehouse — from a dual-database Oracle + PostgreSQL architecture to a modern <strong>open-source Data Lakehouse</strong>. The migration pipeline, patterns, and tooling were successfully established and handed over to the data engineering team for ongoing execution — replacing millions of dollars in licensed tooling with a fully version-controlled, testable, and reproducible platform.</p>
+<p>The target architecture uses <strong>dbt (data build tool)</strong> with a <strong>Medallion pattern (Bronze → Silver → Gold)</strong>, <strong>Apache Spark</strong> for compute, <strong>MinIO</strong> (S3-compatible) for storage, <strong>Delta Lake</strong> for ACID transactions, <strong>Hive Metastore</strong> for schema management, <strong>Kyuubi</strong> as the JDBC gateway, and <strong>Apache Airflow</strong> for orchestration.</p>
+
+<h2>2.2 Migration Context — From and To</h2>
+
+<h3>2.2.1 Legacy Platform (Source)</h3>
+<table>
+  <thead><tr><th>Component</th><th>Technology</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Data Lake</strong></td><td>PostgreSQL</td><td>Raw data landing zones — ~60 schemas, ~1,800 tables, ~2 TB</td></tr>
+    <tr><td><strong>DWH Core</strong></td><td>Oracle (Core Schema)</td><td>Core dimension/fact tables, ~340 tables</td></tr>
+    <tr><td><strong>Reporting</strong></td><td>Oracle (Reporting Schema)</td><td>Report views and target tables (~220 analytical + ~190 regulatory + ~250 views)</td></tr>
+    <tr><td><strong>ETL Engine</strong></td><td>Oracle Data Integrator (ODI)</td><td>~4,300 mappings across ~20 projects</td></tr>
+    <tr><td><strong>Orchestration</strong></td><td>Oracle Job Chains (OJC)</td><td>Multi-stage screening pipeline (Staging → DQ → Core → Views → Targets)</td></tr>
+    <tr><td><strong>Scripting</strong></td><td>PL/SQL, Groovy, DataStage</td><td>Validation, transformations, ingestion</td></tr>
+  </tbody>
+</table>
+
+<h3>2.2.2 Target Platform (Data Lakehouse)</h3>
+<table>
+  <thead><tr><th>Component</th><th>Technology</th><th>Role</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Object Storage</strong></td><td>MinIO (S3-compatible)</td><td>Persistent data storage: <code>s3a://ent-bronze/</code>, <code>s3a://ent-silver/</code>, <code>s3a://ent-gold/</code></td></tr>
+    <tr><td><strong>Compute Engine</strong></td><td>Apache Spark</td><td>Distributed SQL and data processing</td></tr>
+    <tr><td><strong>Table Format</strong></td><td>Delta Lake</td><td>ACID transactions, time travel, schema evolution</td></tr>
+    <tr><td><strong>Schema Catalog</strong></td><td>Hive Metastore (HMS)</td><td>Schema management and metadata catalog</td></tr>
+    <tr><td><strong>JDBC Gateway</strong></td><td>Kyuubi</td><td>JDBC/ODBC interface to Spark</td></tr>
+    <tr><td><strong>Transformation</strong></td><td>dbt (data build tool)</td><td>SQL-based transformation engine with Medallion architecture</td></tr>
+    <tr><td><strong>Orchestration</strong></td><td>Apache Airflow</td><td>DAG-based pipeline scheduling (ingestion + dbt runs)</td></tr>
+    <tr><td><strong>Development</strong></td><td>PostgreSQL (local)</td><td>Local development target simulating the Lakehouse</td></tr>
+  </tbody>
+</table>
+
+<h3>2.2.3 Architecture Diagram — Target State</h3>
+<div class="diagram">┌──────────────────────────────────────────────────────────────────────────────────────┐
+│  POSTGRESQL DATA LAKE (READ ONLY — Source of Truth)                                  │
+│  Landing Zone schemas — raw data from 20+ source banking systems                     │
+└──────────────────────────────────┬───────────────────────────────────────────────────┘
+                                   │
+            ═══════════════════════╪═══════════════════════════
+            SPARK JDBC INGESTION   │   Managed by Airflow DAGs
+            ═══════════════════════╪═══════════════════════════
+                                   ▼
+┌──────────────────────────────────────────────────────────────────────────────────────┐
+│                     LAKEHOUSE (MinIO + Spark + Delta Lake + HMS)                      │
+│                                                                                      │
+│  ┌────────────────────────────────────────────────────────────────────────────────┐  │
+│  │  BRONZE LAYER  (s3a://ent-bronze/)                                             │  │
+│  │  Raw data, 1:1 copy from PostgreSQL landing zones                              │  │
+│  │  Delta Lake format │ 90-day retention │ dbt source()                           │  │
+│  └──────────────────────────────────┬─────────────────────────────────────────────┘  │
+│                                     │ dbt source()                                    │
+│                                     ▼                                                 │
+│  ┌────────────────────────────────────────────────────────────────────────────────┐  │
+│  │  SILVER LAYER  (s3a://ent-silver/)                                             │  │
+│  │  Cleaned, typed, deduplicated data — dbt views                                 │  │
+│  │  silver__prestage │ silver__staging │ silver__lookup │ silver__dq               │  │
+│  └──────────────────────────────────┬─────────────────────────────────────────────┘  │
+│                                     │ dbt ref()                                       │
+│                                     ▼                                                 │
+│  ┌────────────────────────────────────────────────────────────────────────────────┐  │
+│  │  GOLD LAYER  (s3a://ent-gold/)                                                 │  │
+│  │  Business-ready, report-ready data — dbt tables                                │  │
+│  │  gold__core (dimensions/facts) │ gold__reports (analytical/regulatory targets)  │  │
+│  └────────────────────────────────────────────────────────────────────────────────┘  │
+│                                                                                      │
+│  ORCHESTRATION: Apache Airflow  (Ingestion DAGs + dbt DAGs)                          │
+└──────────────────────────────────────────────────────────────────────────────────────┘</div>
+
+<h2>2.3 Technology Stack</h2>
+<table>
+  <thead><tr><th>Component</th><th>Technology</th><th>Version/Details</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Transformation Engine</strong></td><td>dbt (data build tool)</td><td>dbt-postgres adapter (dev), dbt-spark (target)</td></tr>
+    <tr><td><strong>Development Database</strong></td><td>PostgreSQL</td><td>14+ (local development)</td></tr>
+    <tr><td><strong>Production Data Lake</strong></td><td>PostgreSQL</td><td>Source data</td></tr>
+    <tr><td><strong>Production DWH</strong></td><td>Oracle</td><td>Verification reference</td></tr>
+    <tr><td><strong>Target Storage</strong></td><td>MinIO</td><td>S3-compatible object storage (<code>s3a://ent-*</code>)</td></tr>
+    <tr><td><strong>Target Compute</strong></td><td>Apache Spark</td><td>Distributed SQL engine</td></tr>
+    <tr><td><strong>Table Format</strong></td><td>Delta Lake</td><td>ACID, time travel, schema evolution</td></tr>
+    <tr><td><strong>Schema Catalog</strong></td><td>Hive Metastore (HMS)</td><td>Table registration and metadata</td></tr>
+    <tr><td><strong>JDBC Gateway</strong></td><td>Apache Kyuubi</td><td><code>jdbc:hive2://</code> interface to Spark</td></tr>
+    <tr><td><strong>Orchestration</strong></td><td>Apache Airflow</td><td>DAG scheduling for ingestion + dbt</td></tr>
+    <tr><td><strong>Templating</strong></td><td>Jinja2</td><td>dbt SQL templating</td></tr>
+    <tr><td><strong>Version Control</strong></td><td>Git</td><td>Full model versioning and CI/CD</td></tr>
+    <tr><td><strong>Documentation</strong></td><td>dbt docs</td><td>Auto-generated data dictionary + lineage DAG</td></tr>
+  </tbody>
+</table>
+
+<h2>2.4 Transferable Expertise</h2>
+
+<h3>Platform Migration</h3>
+<ul>
+  <li><strong>Any-to-Any Migration</strong> — dbt supports 30+ adapters (Spark, Snowflake, Databricks, BigQuery, Synapse, Redshift, PostgreSQL, DuckDB, etc.).</li>
+  <li><strong>Lakehouse Architecture Design</strong> — Full architecture specifications for MinIO/S3 + Spark + Delta Lake + HMS + Airflow stack.</li>
+  <li><strong>Legacy ETL Decomposition</strong> — Systematic decomposition of Oracle PL/SQL, DataStage, Informatica, ODI, SSIS jobs into declarative dbt SQL models.</li>
+  <li><strong>Incremental Migration Strategy</strong> — Migrate report-by-report (not all-at-once), validating each against production.</li>
+</ul>
+
+<h3>dbt Best Practices</h3>
+<ul>
+  <li><strong>Medallion Architecture Implementation</strong> — Bronze (raw), Silver (cleaned/typed), Gold (business-ready) layer design with proper materialization strategy.</li>
+  <li><strong>Testing Framework</strong> — dbt tests for schema validation, uniqueness, referential integrity, freshness.</li>
+  <li><strong>CI/CD Pipeline</strong> — Automated <code>dbt build</code> + <code>dbt test</code> on every Git push, with deployment gates.</li>
+  <li><strong>Documentation</strong> — Auto-generated data dictionaries with <code>dbt docs generate</code>, including column descriptions and lineage DAGs.</li>
+</ul>
+
+<h3>Cost Optimization</h3>
+<ul>
+  <li><strong>Table Pruning</strong> — During migration, identify and eliminate redundant/unused tables. DQ layer eliminated entirely (saving ~340 table materializations).</li>
+  <li><strong>Open-Source Stack</strong> — MinIO + Spark + Delta Lake + Airflow + dbt is entirely open-source, avoiding multi-million dollar vendor lock-in.</li>
+  <li><strong>Local Development First</strong> — Develop and test locally against PostgreSQL before deploying to the Lakehouse.</li>
+</ul>
+
+<hr>
+
+<!-- ═══ PROJECT 3 ═══ -->
+<h1 class="project-title" id="p3"><span class="section-label purple">Project 3</span><br>AI Multi-Agent Orchestration — Autonomous Migration Pipeline</h1>
+
+<h2>3.1 Executive Summary</h2>
+<p>Designed and built a <strong>custom AI orchestration engine</strong> that turns what would be months of manual data engineering into an <strong>autonomous, continuously running migration pipeline</strong> — coordinating a network of specialized AI agents that extract, translate, build, test, and deploy dbt models <strong>with minimal to zero human supervision</strong>.</p>
+<p>Instead of a data engineer manually converting each legacy SQL model one at a time, this system uses a <strong>state machine-based orchestration engine</strong> that dispatches work to <strong>purpose-built AI agents</strong> (lineage extraction, SQL translation, model compilation, cross-platform verification, diagnosis). The agents collaborate through a shared PostgreSQL knowledge base, processing models <strong>in parallel</strong> and <strong>continuously</strong> — achieving migration throughput that is <strong>orders of magnitude faster</strong> than any manual or single-agent approach.</p>
+
+<h3>Key Architectural Principle: Existing Chaos Migration</h3>
+<p>This approach embodies an <strong>"existing chaos migration" principle</strong>: dbt can connect to virtually any source and target system (30+ database adapters), meaning the same methodology works regardless of the starting point (Oracle, SQL Server, Teradata, DB2, Informatica, DataStage, SSIS) or the destination (Spark, Snowflake, Databricks, BigQuery, PostgreSQL, DuckDB).</p>
+
+<h2>3.2 Orchestration Architecture</h2>
+
+<h3>3.2.1 State Machine — Migration Pipeline Per Report</h3>
+<div class="diagram">┌──────────────────────────────────────────────────────────────────────────────────────┐
+│                    AI ORCHESTRATION STATE MACHINE (per report)                        │
+│                                                                                      │
+│  ┌─────────────┐    ┌─────────────────┐    ┌──────────────┐    ┌─────────────────┐  │
+│  │  EXTRACT     │───▶│  LOAD TO KB     │───▶│  SEED BRONZE │───▶│ VERIFY BRONZE   │  │
+│  │  (Lineage    │    │  (Migration     │    │  (Data Lake  │    │ (Row counts,    │  │
+│  │   Tracer)    │    │   Data Loader)  │    │   Setup)     │    │  samples, agg)  │  │
+│  └─────────────┘    └─────────────────┘    └──────────────┘    └───────┬─────────┘  │
+│                                                                        │ PASS        │
+│  ┌─────────────────────────────────────────────────────────────────────▼──────────┐  │
+│  │                    BUILD MODELS (Level by Level)                                │  │
+│  │                                                                                │  │
+│  │  For each build_level (0 → N):                                                 │  │
+│  │    1. Query KB for model registry (check reuse / conflicts)                    │  │
+│  │    2. AI Agent: Generate dbt SQL from KB legacy SQL                             │  │
+│  │    3. Replace table refs with {{ ref() }} / {{ source() }}                     │  │
+│  │    4. Convert Oracle syntax → PostgreSQL/Spark                                 │  │
+│  │    5. dbt compile + dbt run                                                    │  │
+│  │    6. AI Tester: Verify model output vs production                             │  │
+│  │    7. If PASS → mark complete, move to next level                              │  │
+│  │    8. If FAIL → AI diagnosis, one fix attempt, escalate if still failing       │  │
+│  └────────────────────────────────────────────────────────────────┬───────────────┘  │
+│                                                                    │ ALL LEVELS PASS  │
+│  ┌─────────────────────────────────────────────────────────────────▼──────────────┐  │
+│  │  FINAL VERIFICATION                                                            │  │
+│  │  Compare target output 1:1 against Oracle production (row count, data, agg)    │  │
+│  └────────────────────────────────────────────────────────────────┬───────────────┘  │
+│                                                                    │ PASS             │
+│                                                                    ▼                  │
+│  ┌────────────────────────────────────────────────────────────────────────────────┐  │
+│  │  COMMIT &amp; DOCUMENT — Git commit, update report, mark complete                  │  │
+│  └────────────────────────────────────────────────────────────────────────────────┘  │
+└──────────────────────────────────────────────────────────────────────────────────────┘</div>
+
+<h3>3.2.2 Multi-Agent Network — Specialized Custom Agents</h3>
+<table>
+  <thead><tr><th>Agent Type</th><th>Role</th><th>Capabilities</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Lineage Extractor</strong></td><td>Runs table lineage tracer, captures ODI/OJC metadata</td><td>Database connectivity, ODI repository queries, JSON output parsing</td></tr>
+    <tr><td><strong>KB Loader</strong></td><td>Runs migration data loader, classifies bronze sources</td><td>PostgreSQL writes, source classification (LOOKUP vs. TRANSACTIONAL)</td></tr>
+    <tr><td><strong>Data Seeder</strong></td><td>Seeds bronze tables from production</td><td>Cross-database data transfer, date-filtered extracts</td></tr>
+    <tr><td><strong>Bronze Verifier</strong></td><td>Validates seeded data</td><td>Row count comparison, sample data validation, aggregate checks</td></tr>
+    <tr><td><strong>Model Builder</strong></td><td>Generates dbt SQL from KB legacy SQL</td><td>SQL translation (Oracle→PostgreSQL/Spark), <code>{{ ref() }}</code> injection</td></tr>
+    <tr><td><strong>Model Compiler</strong></td><td>Runs <code>dbt compile</code> + <code>dbt run</code></td><td>dbt invocation, error parsing, dependency resolution</td></tr>
+    <tr><td><strong>Model Verifier</strong></td><td>Compares output vs. production</td><td>Cross-database comparison, numeric tolerance handling</td></tr>
+    <tr><td><strong>Diagnosis Agent</strong></td><td>Analyzes failures, proposes fixes</td><td>Error pattern matching, SQL debugging, schema comparison</td></tr>
+    <tr><td><strong>Documentation Agent</strong></td><td>Updates live report documents</td><td>Markdown generation, status tracking, timestamp management</td></tr>
+  </tbody>
+</table>
+
+<h3>3.2.3 Parallel Execution</h3>
+<ul>
+  <li><strong>Inter-report parallelism</strong> — Multiple target reports processed concurrently</li>
+  <li><strong>Intra-report parallelism</strong> — Independent build levels processed in parallel</li>
+  <li><strong>Model reuse detection</strong> — Shared dependencies resolved via registry instead of recreating</li>
+</ul>
+
+<h3>3.2.4 Knowledge Base (KB) — Shared State</h3>
+<table>
+  <thead><tr><th>KB Table</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Run Metadata</strong></td><td>Run metadata, ODI execution dates (auto-extracted reporting date parameters)</td></tr>
+    <tr><td><strong>Legacy SQL Steps</strong></td><td>All SQL/DDL from ODI/OJC sessions with provenance (17+ DDL sources)</td></tr>
+    <tr><td><strong>Lineage Edges</strong></td><td>Table-level lineage graph (source → target edges)</td></tr>
+    <tr><td><strong>Build Sequence</strong></td><td>Topological sort determining build order (Level 0 → N)</td></tr>
+    <tr><td><strong>Bronze Sources</strong></td><td>Source classification (LOOKUP vs. TRANSACTIONAL, date filter columns)</td></tr>
+    <tr><td><strong>Model Registry</strong></td><td>Central model name registry for cross-report reuse and conflict detection</td></tr>
+  </tbody>
+</table>
+
+<h2>3.3 Automated Testing Framework</h2>
+
+<h3>3.3.1 Multi-Level Verification Strategy</h3>
+<table>
+  <thead><tr><th>Level</th><th>Verification Method</th><th>Tool</th><th>What Is Checked</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Bronze Sources</strong></td><td>Bronze source verifier</td><td>Python + SQL</td><td>Column structure match, row counts, sample records, numeric aggregates</td></tr>
+    <tr><td><strong>Silver Models</strong></td><td><code>dbt test</code> + model verifier</td><td>dbt + Python</td><td>Schema validation, row counts vs. production views, sample data comparison</td></tr>
+    <tr><td><strong>Gold/Core Models</strong></td><td><code>dbt test</code> + model verifier</td><td>dbt + Python</td><td>Surrogate key consistency, referential integrity, HCDL pattern validation</td></tr>
+    <tr><td><strong>Gold/Reports</strong></td><td>Model verifier + AI Tester</td><td>Python + AI</td><td>Full 1:1 comparison against Oracle production</td></tr>
+    <tr><td><strong>Cross-Model</strong></td><td>AI Tester (custom)</td><td>AI Agent</td><td>Complex business logic, multi-join correctness, currency conversion accuracy</td></tr>
+  </tbody>
+</table>
+
+<h3>3.3.2 AI-Powered Testing (Where dbt Cannot Reach)</h3>
+<ol>
+  <li><strong>Generate verification queries</strong> dynamically based on KB metadata</li>
+  <li><strong>Execute against both local dbt output and production</strong> Oracle/PostgreSQL</li>
+  <li><strong>Compare results</strong> with configurable tolerance for numeric precision</li>
+  <li><strong>Report discrepancies</strong> with root cause hypothesis</li>
+  <li><strong>Distinguish expected differences</strong> (e.g., date handling design decisions)</li>
+</ol>
+
+<h3>3.3.3 Global Error Policy</h3>
+<p>The orchestration implements a strict <strong>fail-fast policy</strong>:</p>
+<ol>
+  <li>Error occurs → document in report file</li>
+  <li>Attempt ONE automated fix based on error pattern</li>
+  <li>Re-run the failed step</li>
+  <li>If STILL fails → <strong>STOP IMMEDIATELY</strong>, escalate to human</li>
+  <li>No looping, no alternative approaches without human approval</li>
+</ol>
+
+<h2>3.4 Prototyping Strategy — Open Source First</h2>
+<ol>
+  <li><strong>Start with open-source/local databases</strong> — PostgreSQL, DuckDB, or SQLite as both source and target</li>
+  <li><strong>Run the full pipeline end-to-end locally</strong> — extraction, KB loading, model generation, compilation, testing</li>
+  <li><strong>Validate the AI orchestration works</strong> before incurring any cloud costs</li>
+  <li><strong>Scale to cloud</strong> only after local verification — deploy to Spark/MinIO/Delta Lake or Snowflake/Databricks</li>
+</ol>
+
+<h2>3.5 Technology Stack — AI Orchestration</h2>
+<table>
+  <thead><tr><th>Component</th><th>Technology</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><strong>AI Agent Runtime</strong></td><td>Claude AI + cost-efficient models</td><td>Tiered strategy: cheaper models for deterministic DE tasks; Claude for orchestration and complex decisions</td></tr>
+    <tr><td><strong>Orchestration Engine</strong></td><td>Custom state machine (Python)</td><td>Pipeline state management, agent dispatch</td></tr>
+    <tr><td><strong>Task Coordination</strong></td><td>Parallel task execution framework</td><td>Independent model builds in parallel</td></tr>
+    <tr><td><strong>Knowledge Base</strong></td><td>PostgreSQL</td><td>Shared state, lineage metadata, model registry</td></tr>
+    <tr><td><strong>Lineage Extraction</strong></td><td>Custom Python Platform</td><td>ODI/OJC/PL/SQL reverse engineering</td></tr>
+    <tr><td><strong>Model Generation</strong></td><td>dbt (SQL + Jinja2)</td><td>Declarative transformation models</td></tr>
+    <tr><td><strong>Verification</strong></td><td>Python scripts + AI testers</td><td>Multi-level automated testing</td></tr>
+    <tr><td><strong>Version Control</strong></td><td>Git</td><td>Full audit trail of all AI-generated changes</td></tr>
+    <tr><td><strong>Pipeline Watchdog</strong></td><td>Higher-capability AI models</td><td>Oversight: detects stalled/failed states, restarts pipeline stages</td></tr>
+    <tr><td><strong>System Services</strong></td><td>OS-level service daemons</td><td>Process-level oversight, auto-restart, health-check endpoints</td></tr>
+  </tbody>
+</table>
+
+<h2>3.6 Transferable Expertise — AI-Accelerated Migration for Any Platform</h2>
+
+<h3>AI-Orchestrated Migration Services</h3>
+<ul>
+  <li><strong>Custom Agent Network Design</strong> — Specialized AI agent types for any ETL stack (Informatica → dbt, SSIS → dbt, Talend → dbt, DataStage → dbt, etc.).</li>
+  <li><strong>State Machine Customization</strong> — Migration pipeline stages matching any DWH architecture.</li>
+  <li><strong>Parallel Migration at Scale</strong> — Process reports simultaneously using multi-agent parallel execution.</li>
+  <li><strong>Continuous Unattended Execution</strong> — 24/7 throughput that would take a team of data engineers months.</li>
+</ul>
+
+<h3>Chaos Migration Principle</h3>
+<ul>
+  <li><strong>Any Source → Any Target</strong> — Oracle → Snowflake, SQL Server → Databricks, Teradata → BigQuery, DB2 → Synapse, any combination.</li>
+  <li><strong>Prototype Locally First</strong> — Validate end-to-end on open-source/local tools before committing to cloud infrastructure.</li>
+  <li><strong>Incremental Migration</strong> — Old and new platforms run in parallel. Each migrated report verified before cutover.</li>
+</ul>
+
+<h3>Cost &amp; Time Impact</h3>
+<ul>
+  <li><strong>Significant time reduction</strong> — autonomous agent network processes models continuously and in parallel.</li>
+  <li><strong>Reduced cloud costs</strong> — local-first prototyping and table pruning.</li>
+  <li><strong>Reduced risk</strong> — multi-level automated testing at every pipeline stage.</li>
+  <li><strong>Full audit trail</strong> — every AI-generated change is Git-committed with detailed messages.</li>
+</ul>
+
+<hr>
+
+<!-- ═══ END-TO-END ═══ -->
+<h1 class="project-title" style="color: var(--primary);">End-to-End Architecture — How It All Fits Together</h1>
+
+<div class="diagram">┌────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                    │
+│  PROJECT 1: Enterprise ETL Reverse Engineering                                    │
+│  ════════════════════════════════════════                                          │
+│  Reverse-engineers legacy ETL:                                                     │
+│  ODI + OJC + DataStage + PL/SQL + Groovy                                          │
+│  Produces: lineage graphs, SQL steps, structured JSON output                      │
+│                                                                                    │
+│         │                                                                          │
+│         │  JSON output (edges, SQL, build sequence)                                │
+│         ▼                                                                          │
+│                                                                                    │
+│  PROJECT 3: AI Multi-Agent Orchestration                                           │
+│  ════════════════════════════════════════                                          │
+│  State machine + multi-agent network:                                              │
+│  Automated extraction → KB loading → model generation → testing → deployment       │
+│  Continuous, parallel, unattended execution                                        │
+│                                                                                    │
+│         │                                                                          │
+│         │  dbt models (SQL + Jinja2)                                               │
+│         ▼                                                                          │
+│                                                                                    │
+│  PROJECT 2: Data Lakehouse Platform (dbt)                                          │
+│  ════════════════════════════════════════                                          │
+│  Target platform: MinIO + Spark + Delta Lake + Airflow                             │
+│  dbt Medallion architecture: Bronze → Silver → Gold                                │
+│  ~220 analytical targets, ~400+ total targets                                      │
+│                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────┘</div>
+
+<p><strong>Project 1</strong> provides the intelligence — deep understanding of what exists in the legacy system.<br>
+<strong>Project 3</strong> provides the automation — AI agents that transform at scale without human bottlenecks.<br>
+<strong>Project 2</strong> provides the destination — a modern, open-source platform where everything lands.</p>
+
+<p>Together, they form a <strong>complete, production-proven migration process — successfully established and handed over to the team</strong> — that is:</p>
+<ul>
+  <li><strong>Platform-agnostic</strong> — works with any source (Oracle, SQL Server, Teradata, DB2) and any target (Spark, Snowflake, Databricks, BigQuery)</li>
+  <li><strong>AI-accelerated</strong> — orders of magnitude faster than manual migration</li>
+  <li><strong>Fully verified</strong> — automated multi-level testing at every pipeline stage</li>
+  <li><strong>Cost-optimized</strong> — local-first prototyping, table pruning, 100% open-source stack</li>
+  <li><strong>Auditable</strong> — full Git history, live documentation, and complete AI decision trail</li>
+</ul>
+
+<hr>
+<div class="author-block" style="margin-bottom: 40px;">
+  <div class="name">Hrvoje Jerkovic</div>
+  <div class="role">Data Architect / Principal Data Engineer</div>
+</div>
+
+</div>
+</body>
+</html>
